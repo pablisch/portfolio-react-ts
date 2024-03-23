@@ -1,0 +1,150 @@
+:root {
+  --nav-side-padding: 20px;
+  --fake-side-margin: 0.1px;
+  --nav-container-width: calc(85vw + (2 * var(--nav-side-padding)));
+  --navbar-height: 65px;
+}
+
+/* nav {
+  background-color: #c8d5b9;
+  background-size: cover;
+  padding: 7px 0;
+  z-index: 0;
+  transition: background-color 3s ease;
+} */
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(200, 213, 185, 0.92);
+  background-size: cover;
+  padding: 7px 0;
+  z-index: 1000; /* Adjust the z-index as needed */
+  transition: background-color 3s ease;
+}
+
+.nav-container {
+  /* outer container for all NAVBAR elements */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: var(--nav-container-width); /* USE SAME SETTING for .nav-containter, .gallery-container, .focus-container & .footer-container */
+  margin: 0 auto;
+  padding: 0 var(--nav-side-padding); /* standard 20px side padding for all outer containers */
+  overflow: hidden;
+  height: var(--navbar-height);
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  height: inherit;
+}
+
+.navlist {
+  display: flex;
+  justify-content: flex-end;
+  max-width: 700px;
+}
+
+.navlist p {
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.nav-btn {
+  flex: 0 0 20px;
+  text-align: center;
+  margin: 0 4px; /* Any change made here should also be made to margin in .github-link-btn  */
+  border-radius: 15px;
+  padding: 5px 3px;
+  font-weight: 500;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 70px;
+  border: 1px var(--green3b) solid;
+}
+
+.nav-link {
+  background-color: var(--green2b);
+  color: var(--navText);
+}
+
+.nav-link:hover {
+  background-color: var(--green1a);
+  color: var(--navText2);
+}
+
+.external-nav-link {
+  background-color: var(--green6);
+  color: var(--green2b);
+  text-decoration: none;
+}
+
+.external-nav-link:hover {
+  background-color: var(--navText2);
+  color: var(--lime);
+}
+
+
+.github-link-btn {
+  background-color: var(--green1a);
+  margin: 0 0 0 4px;
+}
+
+.github-link-btn:hover {
+  background-color: var(--lime);
+  border: 1px var(--navText2) solid;
+}
+
+.github-logo {
+  max-height: 50px;
+}
+
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.burgerBar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: var(--navText);
+  z-index: 1;
+}
+
+nav h1 {
+  font-size: 2.2rem;
+  font-weight: normal;
+  flex: 1 400px;
+  color: var(--navText);
+  transition: color 7s ease;
+}
+
+nav li {
+  font-weight: bold;
+}
+
+.logo-image {
+  max-width: 60px;
+  margin-right: 15px;
+  opacity: 0.7;
+  transition: opacity 4s ease;
+}
+
+.logo-image:hover {
+  opacity: 0.1;
+}
+
+.logo-image:hover ~ h1 {
+  color: #adfe2f;
+}
